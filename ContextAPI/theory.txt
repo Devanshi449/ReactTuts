@@ -1,0 +1,43 @@
+consider a react application that has lots of components 
+
+we have app component which is the root component and nested within it we have many components
+
+          app component
+
+      a        b          c
+               d          e
+                          f
+requirement in our application is that the components a d and f are supposed to display logged in username
+
+app component will pass the prop a and then b (which will then pass to d) and to c which will be passed to e then firefox
+so here B C E don't need the peop we still have to send the prop through them to be able to pass it to the components furhter down
+
+Imagine if the components were to be mested 5 or 10 levels deep
+
+this sepcially becomes a problem for certain types of props such as language preferace, UI team and authenticated users
+it would be nice if we can directly send the data 
+
+CONTEXT APi*********
+it provides a way to pass data through the component tree without having to pass props down manually at every level
+
+//there are 3 steps to CONTEXT
+1)Create the CONTEXT
+2)Provide a context value(include the provider component and provide a value using value attribute)
+3)Consume the context value when necessary(can be now consumed in any of the descendants components using consumer component)
+
+//IN 3rd part 
+
+we can also pass the defualt value while creating the context
+it is passed as an argument in Usercontext.js simply
+
+const UserContext = React.createContext('Devanshi')
+and then we will comment out the provider component from the app.js and only import <ComponentC/>
+
+there is also another way to consume the value
+you can see this way from vid 40, but it has 2 limitations,
+it works only with class components, and second,it can only subscribe to a single context using context type-->
+<<<<<<< HEAD
+many a times in your application you need to read more than one context in which scenerio the consumer component is the way  
+=======
+many a times in your application you need to read more than one context in which scenerio the consumer component is the way  
+>>>>>>> 3dd271397faddb16b49fce7c3afad877318848f6

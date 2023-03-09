@@ -1,0 +1,3 @@
+A pattern where a function takes as an argument and returns a new component as an argument and returns a new component
+
+const newComponent= higherOrderComponent(original Component)
