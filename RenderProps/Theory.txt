@@ -1,0 +1,7 @@
+it is the another pattern for sharing the code btw react components
+
+when we have created clickcounter and hovercounter seperately we can see that we have duplicated the code   
+here apart from hoc, render props are also useful
+
+2*******************
+the term 'render props' refers to a technique for sharing code btw react components using prop whose value is a function
