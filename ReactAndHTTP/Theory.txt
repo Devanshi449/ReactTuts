@@ -1,0 +1,19 @@
+how react works with https
+
+when we are creating a web application more often we have to react out to the server to fetch some data or send some data based on user interaction
+
+This application is react application
+But earlier we have know that react is a library for building user interfaces and it is in no way concerned about http
+
+this raises avery serious question
+how do we make ajax requests or api callss in react.
+
+react does not have any particular way to fetch or send data to the server in fact as far as react is concerned
+it dosen't veen have to know that there is a server in the picture as react simply read props and state and render the ui therefore to use some data from the server you just have to get the data 
+into components props or state.
+
+now if react is not handling the requests who will be doing that?
+we have to make use of any http library, we will use axios 
+
+tut2)
+we will make use of json placeholder to fetch the data 
