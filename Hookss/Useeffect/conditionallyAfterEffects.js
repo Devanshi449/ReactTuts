@@ -9,7 +9,7 @@ function Hookcounter51(){
     useEffect(()=>{
         console.log('useEffect-updating document title')
         document.title=`you clicked ${count} times`   
-    })
+    },[count])
 
     // in order to conditionally run an effect specify the second parameter to use effect 
     // -----> the second parameter is the array of values that the effect depends on , if the value don't change btw the renders the value simply dosen't run 
