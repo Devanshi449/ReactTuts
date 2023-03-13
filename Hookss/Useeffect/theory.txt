@@ -1,0 +1,30 @@
+If you've been working with class components you would have performed side-effects in your components,
+ex updating the dom,fetching data 
+Since render method would be too early to perform side-effetcs you have to make use of the life-cycle methods,
+
+for ex. consider updating the document title 
+
+combine the 2 side effects
+
+componentDidMount(){
+    document.title=`You clicked ${this.state.count} times`;
+    this.interval=setInterval(this.tick,1000)
+}
+
+componentDidUpdate(){
+    document.title=`you clicked ${this.state.count} times`
+}
+
+componentWillUnmount()
+{
+    clearInterval(this.interval)
+}
+
+so 2things to notice,
+1)we have to write same code in both componentDidMount and componentDidUpdate
+2)Code related to the timer setInterval and clearInterval which are related are put into different code blocks :: different lifecycle methods
+wouldn't it be nice to not repeat the code and at the same time group only the related code this is where useeffect hook is useful
+
+useEffect----------------------------------
+the effect hook lets you to perform side effects in fucntional components
+it is a close replacement of componentDidMount, componentDidupdate and componentWillUnmount
