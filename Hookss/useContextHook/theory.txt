@@ -1,0 +1,18 @@
+
+it's concept is similar to context API
+
+context provides a way to pass data through the component tree without having to pass 
+props down manually.
+
+vid 59---
+when we pass a single element or single attribute,
+then it is easy, but when we pass 2 or more and use then by context provieder, 
+it gets very much messy and lot of nesting and there is better way using useContext HOOKS
+
+useContext hook let's use consume values in a more simpler way
+
+vid 60--
+3 simple steps
+1-import useContext from react
+2-import necessary context
+3-final step is call the useContext function passing in the context as it's arguemnts
