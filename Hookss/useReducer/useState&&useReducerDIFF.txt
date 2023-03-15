@@ -1,0 +1,16 @@
+   scenarios                  useState                useReducer
+-> type of state            number,string,boolean      Object or array
+exp--if we need to manage count state then usesttate is better choice but if we are managing person object with firstname,lastname,age, then useReducer
+
+->number of state             one or two                 Too many
+   transition
+exp-if we are updating one or 2 state variables use state must be fine, but if we start saying 5 or more setstate calls we should reducer
+because it makes state transition predictable, we will be updating several state variable but all of that will be hapenning in one reducer fucntion
+
+->Related state Transition     No                        YES
+exp-  for exapple in DataFetchingTWO we used usereducer to update leading,error,post as state transitions are all related,all the states are updated together when data 
+is accesed successfully or not
+
+->LOCAL VS GLOBAL              LOCAL                     GLOBAL
+exp- if I want to maintain local component state then useState if fine but if i want to maintain global state that can be altered by component's deep children
+useReducer is a better option
