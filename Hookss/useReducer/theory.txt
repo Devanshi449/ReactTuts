@@ -1,0 +1,33 @@
+useReducer is a hook that is used for state management 
+
+wait...don't we already have useState for state management.
+...useReducer is an alternative to useState
+
+what's the difference?
+useState is build using useReducer
+so useReducer is a more primitive hook compared to useState
+
+when both are made for managing state when to use useReducer vs useState!!!!!
+but at first video we can't understand this 
+
+useState- related to state
+useEffect- related to side effects
+useContext-ContextAPI
+useReducer-reducers
+
+in javascript- arr.reduce() fucntion takes 2 parameters,one is reducer fucntion , second, accumulator (or the initial value that the reducer fucntion can make use of the  )
+
+so there is a hige similarity btw the reduce and useReducer
+--------------------------DIFFERENCE-------------------------------------
+reduce in javascript                         useReducer in React
+
+array.reduce(reducer,initialValues)          useReducer(reducer,initialState)
+
+in it's simplest form it will accept         it returns new state
+                                             newState=reducer(currentstate,action)
+2 values accumulator and item value and 
+return a single value
+singleValue=reducer(accumulator,itemValue)   
+
+reduce method returns a single value         useReducer returns a pair of values.
+                                             [newState,dispatch]
