@@ -1,0 +1,21 @@
+//what we really care is performance
+
+now we can see that in parentCOMPONENT even on clicking in increase age all the other 4 comonents are also getting re-rendered,
+so imagine if we have 20 30 components,then all the components will be re-rendered on changind a single component ans we will have performance issues
+
+to improve perofrmance, we need to restrict re-renders to only components that need to re-render
+
+we can use react.memo, it is a hoc that prevent the re-render of the component whose state is not changed
+but then also there are several useless renders
+
+so we will use useCalllbackhook
+useCallback is a hook what will return a memoized version of the callback fucntion that only changes if one of the dependencies has changed
+
+why? 
+it is usefull when passing callback to optimized child component(means used memo in children) that rely on reference equality(reference equality is checking if functions are equal)
+to prevent unnesessary renders
+
+how?
+1->import useCallback
+2-call usecallback whoch accepts callback fucntion as first parameter and array of dependencies as second parameter
+  
