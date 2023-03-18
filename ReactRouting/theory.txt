@@ -1,0 +1,10 @@
+
+it is a fully-featured client and server-side routing library for react
+helps create and navigate between URLs that make up your web application
+provides unique urls for different components in the app and makes the UI easily shareable with the other users
+
+tut3
+first we will add our app in browserRouter in index.js
+1- we wrapped the app component with browser Router in app.js
+2- Crete the component that need to be rendered at different url paths
+3- Configure the routes using routes and route components from react router routes at the top level which can contain multiple route component
